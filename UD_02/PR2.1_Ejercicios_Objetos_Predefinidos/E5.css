@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra el contenedor en la página */
+  align-items: flex-start; /* Alinea los elementos al principio (top) */
+  gap: 20px; /* Espacio entre la tabla y el botón */
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  float: left;
+}
+
+input {
+  width: 50px;
+  height: 30px;
+  text-align: left;
+  margin: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+}

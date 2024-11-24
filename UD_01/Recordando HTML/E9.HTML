@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E9-Formulari d'inscripció Cyberwall</title>
+</head>
+<body>
+  <div>
+    <h1>Formulari d'inscripció Cyberwall</h1>
+    <form action="" method="post" onsubmit="return validadorFormulario()">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Nom i cognoms..." required style="border-color: red;"><br>
+      <label for="username">Create a user name:</label><br>
+      <input type="text" id="username" name="username" required style="border-color: red;"><br>
+      <label for="password">Create a password:</label><br>
+      <input type="text" id="password" name="password" requiered minlength="6" maxlength="10" style="border-color: red;"><br><br>
+      <label for="birthday">Birthday:</label>
+
+      <input type="text" id="birthday" name="birthday" placeholder="dd/mm/aaaa"><br>
+      <label for="iam">I am:</label>
+
+      <select id="iam" name="iam">
+        <option value="a student">a student</option>
+        <option value="a teacher">a teacher</option>
+        <option value="a bussines owner">a bussines owner</option>
+        <option value="self-employed">self-employed</option>
+        <option value="other">other</option>
+      </select><br>
+
+      <label for="mobilephone">Mobile phone</label>
+      <input type="text" id="mobilephone" name="mobilephone" required style="border-color: red;"><br>
+  
+      // en el imput range introducimos el evento onchange para obtener una etiqueta output con el valor modificado del selector
+      <label for="englishlevel">Select your English level (0-10)</label>
+      <input type="range" id="englishlevel" name"englishlevel" min="0" max="10" step="1" value="5" onchange="document.getElementById('englislevelvalue').value=value">
+      <output id="englislevelvalue" name="englislevelvalue" for="englislevel">5</output>  <br><br>
+      
+      <button type="submit">Sign me up</button>
+    </form>
+  </div>
+
+  <script>
+    function validadorFormulario() {
+        var password = document.getElementById('password').value;
+
+        if (password.length < 6 || password.length > 12) {
+            alert('El password debe tener entre 6 y 12 caracteres.');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</body>
+</html>

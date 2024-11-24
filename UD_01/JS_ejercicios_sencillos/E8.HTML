@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8 - Formulario cálculo VALOR MAYOR</title>
+  
+</head>
+
+<body>
+  <!-- Creamos un formulario para recoger los 3 numeros y con un submit que inicie la fución de JS para la lógica -->
+  <form name="formularioNumeros">
+
+    <input type="number" id="num1" name="numero1" placeholder="Número 1"><br>
+    <input type="number" id="num2" name="numero2" placeholder="Número 2"><br>
+    <input type="number" id="num3" name="numero3" placeholder="Número 3"><br> 
+
+    <input type="submit" value="Enviar" onclick=(calculoMayor())>
+   
+</form>
+<!-- enlace con la página de scripts, con la clausula defer para que se carge previamente todo el DOM. -->
+<script src="E8.JS" defer ></script>
+
+</body>
+</html>
